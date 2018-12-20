@@ -28,7 +28,7 @@
 var Cookie =
 {
     // Create a new cookie:
-    create: function( name, value, expire, path )
+    set: function( name, value, expire, path )
     {
         var thePath = (path) ? path : '/',
             d       = new Date();
@@ -39,7 +39,7 @@ var Cookie =
     },
     
     // Get the value for a cookie:
-    read: function( name )
+    get: function( name )
     {
         var n  = name + '=',
             dc = decodeURIComponent(document.cookie),
@@ -60,14 +60,14 @@ var Cookie =
     },
     
     // Checks if a cookie is already set:
-    isSet: function( name )
+    isset: function( name )
     {
         return ( document.cookie.indexOf(name+'=') > -1 );
     },
     
     // Delete a cookie:
-    erase: function( name )
+    delete: function( name )
     {
-        this.create( name, '', -1);
+        this.set( name, '', -1);
     }
 }
