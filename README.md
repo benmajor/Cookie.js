@@ -7,10 +7,11 @@ All functions can be called against the `Cookie` object, which exists in `window
 
 Below is an example of retrieving a cookie whose name is `user_id`:
 
-    Cookie.read('user_id'); // Returns '1';
+    Cookie.get('user_id'); // Returns '1';
+    
 ## 3. Functions:
 
-**`create(name, value, expires, path = '/')`:**
+**`set(name, value, expires, path = '/')`:**
 <br />Create a new cookie.
 
 Arguments:
@@ -20,7 +21,7 @@ Arguments:
  - `path`: the path to store the cookie against (*optional*)
 ----
 
-**`read(name)`:**
+**`get(name)`:**
 <br />Read the value of the cookie with the specified name.
 
 Arguments:
@@ -30,7 +31,7 @@ Returns: (`string`) the cookie value.
 
 ----
 
-**`isSet(name)`:**
+**`isset(name)`:**
 <br />Check to see if a cookie with the specified name exists.
 
 Arguments:
@@ -40,7 +41,7 @@ Returns: (`bool`) `true` if the cookie exists, otherwise `false`.
 
 ----
 
-**`erase(name)`:**
+**`delete(name)`:**
 <br />Erase a cookie by its name.
 
 Arguments:
